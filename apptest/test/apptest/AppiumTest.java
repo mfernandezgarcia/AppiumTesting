@@ -1,12 +1,13 @@
 package apptest;
 
-import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import java.net.URL;
-import org.junit.Before;
-import org.junit.Test;
 
 import java.net.MalformedURLException;
 
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.remote.AutomationName; 
@@ -16,7 +17,7 @@ import io.appium.java_client.remote.MobileCapabilityType;
 public class AppiumTest {
 	private IOSDriver driver;
 
-	@Before
+	@BeforeEach
 	public void setUp() throws MalformedURLException{
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		
